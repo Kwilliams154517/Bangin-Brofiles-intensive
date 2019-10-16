@@ -1,0 +1,21 @@
+<!-- templates/base.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title> Banging Brofiles </title>
+   <link href='{{ url_for('static', filename='style.css')}}' rel = 'stylesheet'>
+</head>
+<body>
+
+    {% block content %}
+    <h1> Banging Brofiles </h1>
+    <p>for the bros that bang </p>
+    <h1> WOULD YOU LIKE TO CREATE A BROFILE BRO</h1>
+    <p>Just say yes bro</p>
+    <input type="button" value="Click to Brocreate" onclick="window.location.href = 'http://127.0.0.1:5000/home ';" >
+    <img src="static/Brofile_background.gif" alt="Brofile Background" id= 'backgroundPhoto'>
+    {% endblock %}
+
+</body>
+</html>

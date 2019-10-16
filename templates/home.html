@@ -1,0 +1,10 @@
+<!-- templates/home.html -->
+{% block content %}
+    <h1>WELCOME YOU READY TO CREATE YOUR BANGING BROFILE BRO </h1>
+    <img src="static/doyoubangbro.jpeg" alt="Brofile picture" id= 'brofilePhoto'>
+    <input type="button" value="What do you want to do next bro" onclick="window.location.href = 'http://127.0.0.1:5000//user/<brofile_id> ';">
+     
+        <link href='{{ url_for('static', filename='style.css')}}' rel = 'stylesheet'>
+     
+    <img src="static/Brofile_background.gif" alt="Brofile Background" id= 'backgroundPhoto'>
+     {% endblock %}
