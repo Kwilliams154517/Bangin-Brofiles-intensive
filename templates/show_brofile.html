@@ -1,22 +1,8 @@
-{% extends home.hmtl%}
+{% extends base.hmtl%}
 
 <!-- templates/show_brofile.html -->
-<!doctype html>
-<html>
-<head>
-  <meta charset='utf-8'>
-  <title>Banging Brofile </title>
-
-                
-    
-</head>
-<body>
-
-    {% block content %}
-    <h1>This is your brofile</h1>
-    <li> Would you like to design your profile now lets start with the <img> src="filler.png" </img> >brofile picture</li>
-    <input type="button" value="What do you want to do next bro" onclick="window.location.href = 'http://127.0.0.1:5000//user/<brofile_id> ';">
-    {% endblock %}
-
-</body>
-</html>
+{% block content %}
+<h1>This is your brofile</h1>
+<li> Would you like to design your profile now lets start with the <img> src="filler.png" </img> >brofile picture</li>
+<input type="button" value="What do you want to do next bro" onclick="window.location.href = 'http://127.0.0.1:5000//user/<brofile_id> ';">
+{% endblock %}
