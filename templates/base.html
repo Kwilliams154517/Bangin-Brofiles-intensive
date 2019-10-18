@@ -9,12 +9,14 @@
 <body>
 
     {% block content %}
-    <h1> Banging Brofiles </h1>
-    <p>for the bros that bang </p>
-    <h1> WOULD YOU LIKE TO CREATE A BROFILE BRO</h1>
-    <p>Just say yes bro</p>
-    <a href='/home'><input type="button" value="Click to Brocreate"></a>
-    <img src="static/Brofile_background.gif" alt="Brofile Background" id= 'backgroundPhoto'>
+    <h1 id="header" >Banging Brofiles </h1>
+    <p id="subtext" >...for the bros that bang </p>
+    <h1 id="header" > WOULD YOU LIKE TO CREATE A BROFILE BRO</h1>
+    <p id="subtext">Just say yes bro</p>
+    <a id='button' href='/home'><input type="button" value="Click to Brocreate"></a>
+    <a id='secondbutton' href='/home/bang'><input type="button" value="Bro view the bang of the day"></a>
+    <a id='button' href='/home'><input type="button" value="click and scroll down to see your and your bro's brofiles"></a>
+    <img  id= 'backgroundpic' src="static/source.gif" alt="Brofile Background" >
     {% endblock %}
 
 </body>

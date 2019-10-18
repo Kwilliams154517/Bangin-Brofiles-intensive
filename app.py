@@ -4,7 +4,7 @@ from bson.objectid import ObjectId
 
 client = MongoClient()
 db = client.brofiles
-brofiles = db.broifiles
+brofiles = db.brofiles
 
 app = Flask(__name__)
 
@@ -50,18 +50,23 @@ def brofiles_show(brofile_id):
     brofile = brofiles.find_one({'_id': ObjectId(brofile_id)})
     return render_template('brofiles_show.html', brofile=brofile)
 
-@app.route('/brofiles/<brofile_id>/edit')
+@app.route('/home/brofiles/edit/<brofile_id>')
 def brofiles_edit(brofile_id):
     """ edits brofile profile """
     brofile = brofiles.find_one({'_id': ObjectId(brofile_id)})
     return render_template('brofiles_edit.html', brofile=brofile)
 
-@app.route('/brofiles/<brofile_id>/delete')
+@app.route('/home/brofiles/delete/<brofile_id>', methods=['POST'])
 def brofiles_delete(brofile_id):
     """ edits brofile profile """
     brofiles.delete_one({'_id': ObjectId(brofile_id)})
     return redirect(url_for('brofile_home'))
-    
+
+@app.route('/home/bang')
+def show_bang_of_day():
+    ''' shows bang of the day chart '''
+    return render_template('botd.html')
+
 
 
 if __name__ == '__main__':

@@ -1,6 +1,63 @@
+@font-face {
+    font-family: 'bangin';
+    src: url('Banging_font.ttf');
+}
+
 #brofilePhoto{
     border-image-width: 0px;
 }
 #brofilePic{
     width: 500px;
 }
+#header{
+    color: crimson;
+    font-family: 'bangin';
+    font-size: 54px;
+    text-align: left;
+}
+#subtext{
+    color: deepskyblue;
+    font-family: 'bangin';
+    font-size: 14px;
+    text-align: right;
+}
+#backgroundpic{
+        background-repeat: repeat;
+        background-attachment: fixed;
+        background-position: center; 
+    
+}
+#button{
+    background-color: crimson;
+  border: none;
+  color: deepskyblue;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#secondbutton{
+    background-color: deepskyblue;
+  border: none;
+  color: deepskyblue;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+#delteButton{
+    background-color: crimson;
+  border: none;
+  color: deepskyblue;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+

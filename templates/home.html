@@ -2,7 +2,7 @@
 {% block content %}
     <h1>WELCOME YOU READY TO CREATE YOUR BANGING BROFILE BRO </h1>
     <img src="static/doyoubangbro.jpeg" alt="Brofile picture" id= 'brofilePhoto'>
-    <input type="button" value="What do you want to do next bro" onclick="window.location.href = 'http://127.0.0.1:5000/brofiles/new ';">
+    <input type="button" value="New Brofile Ahead Bros" onclick="window.location.href = 'http://127.0.0.1:5000/brofiles/new ';">
      
         <link href='{{ url_for('static', filename='style.css')}}' rel = 'stylesheet'>
      
@@ -13,6 +13,21 @@
         <p>{{ bro.bio }}</p>
         <p><img id="brofilePic" src="{{ bro.bropiclink}}"></p>
         <br/>
+
+        <p> 
+                <form method='POST' action='/home/brofiles/delete/{{bro._id}}'>
+                <input type='hidden' name='_method' value='DELETE'>
+                <button id='deleteButton' type='submit'>DELETE</button>
+                </form>
+        </p>
+
+        <p> 
+                <form method='POST' action='/home/brofiles/edit/{{bro._id}}'>
+                <input type='hidden' name='_method' value='EDIT'>
+                <button id='deleteButton' type='submit'>EDIT</button>
+                </form>
+        </p>
+                
     {%endfor%}
 
 {% endblock %}
