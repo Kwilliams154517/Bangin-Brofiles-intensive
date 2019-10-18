@@ -36,7 +36,7 @@ def new_brofiles():
 
 @app.route('/brofiles', methods=['POST'])
 def brofiles_submit():
-    """Submit a new playlist."""
+    """Submit a new brofile."""
     brofile = {
         'name': request.form.get('name'),
         'bio': request.form.get('bio'),
@@ -53,6 +53,8 @@ def brofiles_show(brofile_id):
 @app.route('/home/brofiles/edit/<brofile_id>')
 def brofiles_edit(brofile_id):
     """ edits brofile profile """
+    # brofiles = brofile.find_one({'_id': ObjectId(brofile_id)})
+    # return redirect(url_for('brofiles_edit'))
     brofile = brofiles.find_one({'_id': ObjectId(brofile_id)})
     return render_template('brofiles_edit.html', brofile=brofile)
 
@@ -61,6 +63,18 @@ def brofiles_delete(brofile_id):
     """ edits brofile profile """
     brofiles.delete_one({'_id': ObjectId(brofile_id)})
     return redirect(url_for('brofile_home'))
+
+@app.route('/brofiles/<brofile_id>', methods=['POST'])
+def brofiles_update(brofile_id):
+    """Submit an edited brofile."""
+    updated_brofile = {
+        'name': request.form.get('name'),
+        'bio': request.form.get('bio'),
+        'bropiclink': request.form.get('bropiclink'),
+
+    }
+    brofiles.update_one({'_id': ObjectId(brofile_id)},{'$set': updated_brofile})
+    return redirect(url_for('brofiles_show', brofile_id=brofile_id))
 
 @app.route('/home/bang')
 def show_bang_of_day():

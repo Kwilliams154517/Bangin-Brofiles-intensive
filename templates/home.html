@@ -22,10 +22,7 @@
         </p>
 
         <p> 
-                <form method='POST' action='/home/brofiles/edit/{{bro._id}}'>
-                <input type='hidden' name='_method' value='EDIT'>
-                <button id='deleteButton' type='submit'>EDIT</button>
-                </form>
+                <a href='/home/brofiles/edit/{{ bro._id }}'><button id='editButton'>EDIT</button></a>
         </p>
                 
     {%endfor%}

@@ -61,3 +61,13 @@
   font-size: 16px;
 }
 
+#thirdbutton{
+    background-color: crimson;
+  border: none;
+  color: deepskyblue;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+}
