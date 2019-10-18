@@ -1,16 +1,19 @@
 <!-- templates/home.html -->
 {% block content %}
-    <h1>WELCOME YOU READY TO CREATE YOUR BANGING BROFILE BRO </h1>
+    <h1 id='header'>WELCOME YOU READY TO CREATE YOUR BANGING BROFILE BRO </h1>
     <img src="static/doyoubangbro.jpeg" alt="Brofile picture" id= 'brofilePhoto'>
-    <input type="button" value="New Brofile Ahead Bros" onclick="window.location.href = 'http://127.0.0.1:5000/brofiles/new ';">
+    <input id='button' type="button" value="New Brofile Ahead Bros" onclick="window.location.href = 'http://127.0.0.1:5000/brofiles/new ';">
+    <input id='secondbutton'type="button" value="scroll down Bros see what you made" onclick="window.location.href = 'http://127.0.0.1:5000/home ';">
+    <a href='/home/bang'><input id='button' type="button" value="go to BANG of the day bro"></a>
+
      
         <link href='{{ url_for('static', filename='style.css')}}' rel = 'stylesheet'>
      
     <img src="static/Brofile_background.gif" alt="Brofile Background" id= 'backgroundPhoto'>
 
     {% for bro in brofiles %}
-        <p>{{ bro.name }}</p>
-        <p>{{ bro.bio }}</p>
+        <p class='Broinfo'>{{ bro.name }}</p>
+        <p class='Broinfo'>{{ bro.bio }}</p>
         <p><img id="brofilePic" src="{{ bro.bropiclink}}"></p>
         <br/>
 
@@ -24,6 +27,7 @@
         <p> 
                 <a href='/home/brofiles/edit/{{ bro._id }}'><button id='editButton'>EDIT</button></a>
         </p>
+        <hr/>
                 
     {%endfor%}
 

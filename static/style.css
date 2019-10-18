@@ -31,43 +31,65 @@
     background-color: crimson;
   border: none;
   color: deepskyblue;
-  padding: 15px 32px;
+  padding: 5px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 #secondbutton{
     background-color: deepskyblue;
   border: none;
-  color: deepskyblue;
-  padding: 15px 32px;
+  color: crimson;
+  padding: 5px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 
-#delteButton{
+#deleteButton{
     background-color: crimson;
   border: none;
   color: deepskyblue;
-  padding: 15px 32px;
+  padding: 5px 12px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
+  cursor: pointer;
+  float: left;
+}
+#editButton{
+    background-color: deepskyblue;
+    border: none;
+    color: crimson;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    float: right;
 }
 
 #thirdbutton{
-    background-color: crimson;
+  background-color: crimson;
   border: none;
   color: deepskyblue;
-  padding: 15px 32px;
+  padding: 5px 12px;
   text-align: center;
   text-decoration: none;
   display: block;
-  font-size: 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.broinfo{
+    color: darkblue;
+    font-family: 'bangin';
+    font-size: 18px;
+    text-align: center;
+    
 }

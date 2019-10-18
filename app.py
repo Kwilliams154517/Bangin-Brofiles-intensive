@@ -18,7 +18,7 @@ def brofile_index():
     ''' Brofile Homepage '''
     return render_template('base.html')
 
-@app.route('/home', methods=['GET', 'POST'])
+@app.route('/home')
 def brofile_home():
     """ Brofiles creation page """
     return render_template('home.html', brofiles=brofiles.find())  
