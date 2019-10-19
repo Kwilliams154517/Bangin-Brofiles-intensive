@@ -1,4 +1,4 @@
-Run: MONGOD in a seprate terminal 
+<h1><b> Run: MONGOD in a seprate terminal</b></h1> 
 
 
 in the terminal you wish to download the code run:
