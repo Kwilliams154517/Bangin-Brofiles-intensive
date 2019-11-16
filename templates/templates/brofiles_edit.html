@@ -1,0 +1,29 @@
+<!-- templates/brofiles_edit.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<form method='POST' action='/brofiles/{{brofile._id}}'>
+    <input type='hidden' name='_method' value='PUT'/>
+    <fieldset>
+    <legend>Edit Brofile</legend>
+    <!-- TITLE -->
+    <p>
+        <label for='name'>Bro Name</label><br>
+        <input type='text' name='name' value="{{brofile.name}}" />
+    </p>
+    <p>
+        <label for='bio'>Broscription</label><br>
+        <input type='text' name='bio' value='{{brofile.bio}}' />
+    </p>
+    <p>
+        <label for='bropiclink'>Brofile Picture</label><br>
+        <input type='text' name='bropiclink' value='{{brofile.bropiclink}}' />
+    </p>
+    </fieldset>
+
+    <!-- BUTTON -->
+    <p>
+        <button type='submit'>Save Brofile</button>
+    </p>
+</form>
+{% endblock %}

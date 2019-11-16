@@ -1,0 +1,28 @@
+<!-- templates/new_brofile.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<form method='POST' action='/brofiles'>
+    <fieldset>
+    <legend>New Brofile</legend>
+    <!-- TITLE -->
+    <p>
+        <label for='name'>Bro Name</label><br>
+        <input type='text' name='name' />
+    </p>
+    <p>
+        <label for='bio'>Broscription</label><br>
+        <input type='text' name='bio' />
+    </p>
+    <p>
+        <label for='bropiclink'>Brofile Picture</label><br>
+        <input type='text' name='bropiclink' />
+    </p>
+    </fieldset>
+
+    <!-- BUTTON -->
+    <p>
+        <button type='submit'>Save Brofile</button>
+    </p>
+</form>
+{% endblock %}

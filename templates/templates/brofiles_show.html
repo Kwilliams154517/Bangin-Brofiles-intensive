@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>{{ brofile.name }}</p>
+<p>{{ brofile.bio }}</p>
+<p><img id="brofilePic" src="{{ brofile.bropiclink }}"></p>
+ <a  href='/home'><input id='secondbutton' type="button" value="go home bro...you're drunk" ></a>
+ <a href='/home/bang'><input id='button' type="button" value="go to BANG of the day bro"></a>
+ <input id='button' type="button" value="Make another brofile profile bro" onclick="window.location.href = 'http://127.0.0.1:5000/brofiles/new ';">
+
+{% endblock %}
