@@ -81,7 +81,12 @@ def show_bang_of_day():
     ''' shows bang of the day chart '''
     return render_template('botd.html')
 
+@app.route('/home/bromments', methods=['POST'])
+def comments_page(bromments):
+    ''' show profile comments between users '''
+    return render_template('bromments.html')
+
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True) 
